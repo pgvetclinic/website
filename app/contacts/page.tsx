@@ -3,5 +3,5 @@ export default function Contacts() {
     <>
       <div>Contacts</div>
     </>
-  )
+  );
 }
