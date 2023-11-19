@@ -16,13 +16,20 @@ const config: Config = {
     },
     colors: {
       black: {
+        primary: 'rgba(6, 33, 38, 1)',
         7: 'rgba(6, 33, 38, 0.60)',
+        8: 'rgba(6, 33, 38, 0.7)',
+        9: 'rgba(6, 33, 38, 0.8)',
       },
       white: {
         0: '#ffffff',
+        1: 'rgba(244, 245, 244, 1)',
       },
-      red: {
-        800: '#b71c1c',
+      blue: {
+        primary: 'rgba(36, 190, 224, 1)',
+      },
+      brown: {
+        primary: 'rgba(207, 125, 78, 1)',
       },
       background: {
         0: '#F7FCFD',

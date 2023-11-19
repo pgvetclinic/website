@@ -1,19 +1,30 @@
 import Link from 'next/link';
 import Logo from './Logo';
-import { Poppins } from 'next/font/google';
 import useNavigationStore from '@/store/NavigationStore';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: '500',
-});
+import { useEffect } from 'react';
 
 export default function NavBar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
   const toggle = useNavigationStore((state) => state.toggleIsOpen);
+  const hideNavBar = useNavigationStore((state) => state.hidden);
+  const updateScroll = useNavigationStore((state) => state.updateCurrentYpos);
+
+  const handleScroll = () => updateScroll(window.scrollY);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
   return (
     <>
-      <div className='w-full h-20 sticky top-0'>
+      <div
+        style={{
+          top: hideNavBar ? '-200px' : '0',
+          transition: 'top 0.5s',
+        }}
+        className='w-full bg-background-0 h-20 sticky'
+      >
         <div className='container mx-auto px-4 h-full'>
           <div className='flex flex-row-reverse justify-around h-full items-center'>
             <Logo />
@@ -51,10 +62,7 @@ export default function NavBar() {
                 </svg>
               )}
             </button>
-            <ul
-              style={poppins.style}
-              className='hidden leading-normal flex-row-reverse text-black-7 text-[20px] md:flex gap-x-6'
-            >
+            <ul className='hidden font-[500] leading-normal flex-row-reverse text-black-7 text-[20px] md:flex gap-x-6'>
               <li>
                 <Link href='/'>
                   <p>Home</p>
