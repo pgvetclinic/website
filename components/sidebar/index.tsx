@@ -4,32 +4,31 @@ import Link from 'next/link';
 
 export default function Sidebar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
-  const toggle = useNavigationStore((state) => state.toggleIsOpen);
   return isOpen ? (
     <div className='sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid left-0 z-10'>
       <ul className='sidebar-nav text-center leading-relaxed text-xl'>
         <li>
-          <Link href='/' onClick={toggle}>
+          <Link href='/'>
             <p>Home</p>
           </Link>
         </li>
         <li>
-          <Link href='/services' onClick={toggle}>
+          <Link href='/services'>
             <p>Our Services</p>
           </Link>
         </li>
         <li>
-          <Link href='/blog' onClick={toggle}>
+          <Link href='/blog'>
             <p>Blog</p>
           </Link>
         </li>
         <li>
-          <Link href='/about' onClick={toggle}>
+          <Link href='/about'>
             <p>About Us</p>
           </Link>
         </li>
         <li>
-          <Link href='/contacts' onClick={toggle}>
+          <Link href='/contacts'>
             <p>Contact Us</p>
           </Link>
         </li>

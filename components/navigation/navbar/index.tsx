@@ -2,19 +2,26 @@ import Link from 'next/link';
 import Logo from './Logo';
 import useNavigationStore from '@/store/NavigationStore';
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
   const toggle = useNavigationStore((state) => state.toggleIsOpen);
   const hideNavBar = useNavigationStore((state) => state.hidden);
   const updateScroll = useNavigationStore((state) => state.updateCurrentYpos);
+  const routeChange = useNavigationStore((state) => state.routeChange);
 
   const handleScroll = () => updateScroll(window.scrollY);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
+
+  const path = usePathname();
+  useEffect(() => {
+    routeChange();
+  }, [path]);
 
   return (
     <>
