@@ -26,7 +26,7 @@ const config: Config = {
         1: 'rgba(244, 245, 244, 1)',
       },
       blue: {
-        primary: 'rgba(36, 190, 224, 1)',
+        primary: 'rgba(40, 118, 232, 0.84)',
       },
       brown: {
         primary: 'rgba(207, 125, 78, 1)',

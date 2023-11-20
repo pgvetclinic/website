@@ -18,7 +18,10 @@ const useNavigationStore = create<NavigationStore>((set) => ({
   toggleIsOpen: () => set((state) => ({ isOpen: !state.isOpen })),
   routeChange: () => set({ isOpen: false }),
   updateCurrentYpos: (pos: number) =>
-    set((state) => ({ currentYpos: pos, hidden: state.currentYpos < pos })),
+    set((state) => ({
+      currentYpos: pos,
+      hidden: state.currentYpos < pos - 2,
+    })),
 }));
 
 export default useNavigationStore;
