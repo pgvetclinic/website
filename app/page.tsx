@@ -3,7 +3,7 @@ import Characteristics from '@/components/home/Characteristics';
 import Description from '@/components/home/Description';
 import IntroImage from '@/components/home/IntroImage';
 import OpenHours from '@/components/home/OpenHours';
-import Service from '@/components/home/Service';
+import ServiceSection from '@/components/home/ServiceSection';
 import Title from '@/components/home/Title';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
@@ -41,21 +41,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            <Service
-              src='/images/cat-vaccination.jpg'
-              title='Cat Vaccination'
-              key='cat-vaccination'
-            />
-            <Service
-              src='/images/dog-vaccination.jpeg'
-              title='Dog Vaccination'
-              key='dog-vaccination'
-            />
-            <Service
-              src='/images/dog-surgery.jpeg'
-              title='Surgery'
-              key='surgery'
-            />
+            <ServiceSection />
           </div>
         </section>
       </div>

@@ -21,7 +21,7 @@ export default function Logo() {
       <Image
         src={'/images/logo.png'}
         alt='Pg Vet Clinic Logo'
-        width={width < 1024 ? '70' : '70'}
+        width={width < 1024 ? '50' : '70'}
         height={width < 1024 ? '40' : '60'}
         className='relative'
       />

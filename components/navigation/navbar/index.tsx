@@ -16,12 +16,12 @@ export default function NavBar() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  });
 
   const path = usePathname();
   useEffect(() => {
     routeChange();
-  }, [path]);
+  }, [path, routeChange]);
 
   return (
     <>
