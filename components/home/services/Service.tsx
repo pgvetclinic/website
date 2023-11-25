@@ -1,6 +1,6 @@
 'use client';
 
-import Service from './Service';
+import ServiceCard from './ServiceCard';
 import { FadeLoader } from 'react-spinners';
 import useSWR from 'swr';
 import { fetcher } from '@/fetch/utils';
@@ -20,7 +20,7 @@ export default function ServiceSection() {
   if (error) return <div>Error while fetching information</div>;
 
   return data.map((serviceData: ServiceData) => (
-    <Service
+    <ServiceCard
       src={serviceData.data.src}
       title={serviceData.data.title}
       key={serviceData.data.title.replaceAll(' ', '-').toLowerCase()}

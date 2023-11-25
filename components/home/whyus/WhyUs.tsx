@@ -1,9 +1,9 @@
-import Chart from '../svg/Chart';
-import Medicine from '../svg/Medicine';
-import Wallet from '../svg/Wallet';
-import Reason from './whyus/Reason';
+import Chart from '../../svg/Chart';
+import Medicine from '../../svg/Medicine';
+import Wallet from '../../svg/Wallet';
+import Reason from './Reason';
 
-export default function WhyUsSection() {
+export default function WhyUs() {
   return (
     <div className='flex justify-center items-center gap-x-28 gap-y-8 flex-wrap'>
       <Reason

@@ -5,7 +5,7 @@ type ServiceProps = {
   title: string;
 };
 
-export default function Service({ src, title }: ServiceProps) {
+export default function ServiceCard({ src, title }: ServiceProps) {
   return (
     <div className='flex flex-col'>
       <Image

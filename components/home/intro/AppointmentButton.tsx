@@ -1,4 +1,4 @@
-import Arrow from '../svg/Arrow';
+import Arrow from '../../svg/Arrow';
 
 export default function AppointmentButton() {
   return (

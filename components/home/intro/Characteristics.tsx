@@ -1,7 +1,7 @@
-import Calendar from '../svg/Calendar';
-import Doctor from '../svg/Doctor';
-import Mail from '../svg/Mail';
-import Location from '../svg/Location';
+import Calendar from '../../svg/Calendar';
+import Doctor from '../../svg/Doctor';
+import Mail from '../../svg/Mail';
+import Location from '../../svg/Location';
 
 export default function Characteristics() {
   return (

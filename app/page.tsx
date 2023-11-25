@@ -1,11 +1,11 @@
-import AppointmentButton from '@/components/home/AppointmentButton';
-import Characteristics from '@/components/home/Characteristics';
-import Description from '@/components/home/Description';
-import IntroImage from '@/components/home/IntroImage';
-import OpenHours from '@/components/home/OpenHours';
-import ServiceSection from '@/components/home/ServiceSection';
-import Title from '@/components/home/Title';
-import WhyUsSection from '@/components/home/WhyUsSection';
+import AppointmentButton from '@/components/home/intro/AppointmentButton';
+import Characteristics from '@/components/home/intro/Characteristics';
+import Description from '@/components/home/intro/Description';
+import IntroImage from '@/components/home/intro/IntroImage';
+import OpenHours from '@/components/home/intro/OpenHours';
+import ServiceSection from '@/components/home/services/Service';
+import Title from '@/components/home/intro/Title';
+import WhyUs from '@/components/home/whyus/WhyUs';
 import Doctors from '@/components/home/doctors/Doctors';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
@@ -53,7 +53,7 @@ export default function Home() {
             </h3>
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            <WhyUsSection />
+            <WhyUs />
           </div>
         </section>
         <section className='flex flex-col m-5 w-full justify-center items-center bg-brown-secondary py-5'>
