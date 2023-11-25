@@ -27,9 +27,11 @@ const config: Config = {
       },
       blue: {
         primary: 'rgba(40, 118, 232, 0.84)',
+        secondary: 'rgba(36, 190, 224, 0.10)',
       },
       brown: {
         primary: 'rgba(207, 125, 78, 1)',
+        secondary: 'rgba(207, 125, 78, 0.05)',
       },
       background: {
         0: '#F7FCFD',

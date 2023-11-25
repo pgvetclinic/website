@@ -5,6 +5,8 @@ import IntroImage from '@/components/home/IntroImage';
 import OpenHours from '@/components/home/OpenHours';
 import ServiceSection from '@/components/home/ServiceSection';
 import Title from '@/components/home/Title';
+import WhyUsSection from '@/components/home/WhyUsSection';
+import Doctors from '@/components/home/doctors/Doctors';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
@@ -12,8 +14,8 @@ import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 export default function Home() {
   return (
     <SidebarOpenWrapper>
-      <div className='flex flex-col w-full justify-start items-center px-[10px]'>
-        <section className='flex flex-wrap-reverse w-full justify-center items-center'>
+      <div className='flex flex-col w-full h-full justify-center items-center'>
+        <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
           <div className='flex flex-col'>
             <Title />
             <Description />
@@ -42,6 +44,26 @@ export default function Home() {
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
             <ServiceSection />
+          </div>
+        </section>
+        <section className='flex flex-col m-5 w-full justify-center items-center'>
+          <div className='flex w-full justify-around items-center'>
+            <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
+              Why Us
+            </h3>
+          </div>
+          <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
+            <WhyUsSection />
+          </div>
+        </section>
+        <section className='flex flex-col m-5 w-full justify-center items-center bg-brown-secondary py-5'>
+          <div className='flex w-full justify-around items-center'>
+            <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
+              Our Qualified Doctors
+            </h3>
+          </div>
+          <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
+            <Doctors />
           </div>
         </section>
       </div>
