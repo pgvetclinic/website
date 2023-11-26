@@ -1,35 +1,38 @@
 'use client';
+
 import useNavigationStore from '@/store/NavigationStore';
 import Link from 'next/link';
+import Option from './Option';
 
 export default function Sidebar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
+
   return isOpen ? (
     <div className='sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid left-0 z-10'>
-      <ul className='sidebar-nav text-center leading-relaxed text-xl'>
+      <ul className='sidebar-nav text-left'>
         <li>
           <Link href='/'>
-            <p>Home</p>
+            <Option pathName='/' pathText='Home' />
           </Link>
         </li>
         <li>
           <Link href='/services'>
-            <p>Our Services</p>
+            <Option pathName='/services' pathText='Our Services' />
           </Link>
         </li>
         <li>
           <Link href='/blog'>
-            <p>Blog</p>
+            <Option pathName='/blog' pathText='Blog' />
           </Link>
         </li>
         <li>
           <Link href='/about'>
-            <p>About Us</p>
+            <Option pathName='/about' pathText='About Us' />
           </Link>
         </li>
         <li>
           <Link href='/contacts'>
-            <p>Contact Us</p>
+            <Option pathName='/contacts' pathText='Contact Us' />
           </Link>
         </li>
       </ul>
