@@ -10,11 +10,12 @@ import Doctors from '@/components/home/doctors/Doctors';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
+import Footer from '@/components/home/footer/Footer';
 
 export default function Home() {
   return (
     <SidebarOpenWrapper>
-      <div className='flex flex-col w-full h-full justify-center items-center'>
+      <main className='flex flex-col w-full h-full justify-center items-center'>
         <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
           <div className='flex flex-col'>
             <Title />
@@ -66,7 +67,24 @@ export default function Home() {
             <Doctors />
           </div>
         </section>
-      </div>
+        <section className='flex flex-col m-5 w-full justify-center items-center'>
+          <div className='flex w-full justify-around items-center'>
+            <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
+              Testimonials
+            </h3>
+            <div className='flex gap-x-3'>
+              <ServiceLeftArrow />
+              <ServiceRightArrow />
+            </div>
+          </div>
+          <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
+            ola
+          </div>
+        </section>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </SidebarOpenWrapper>
   );
 }
