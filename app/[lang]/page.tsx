@@ -11,14 +11,23 @@ import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 import Footer from '@/components/home/footer/Footer';
+import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
+
   return (
     <SidebarOpenWrapper>
       <main className='flex flex-col w-full h-full justify-center items-center'>
         <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
           <div className='flex flex-col'>
             <Title />
+            <h2>{dictionary.home.intro.title}</h2>
             <Description />
             <Characteristics />
             <div className='flex justify-around items-center flex-wrap py-5'>

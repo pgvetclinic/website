@@ -11,13 +11,17 @@
     "format:fix": "prettier --write --list-different ."
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.2",
+    "@types/negotiator": "^0.6.3",
     "eslint-plugin-prettier": "^5.0.1",
     "gray-matter": "^4.0.3",
+    "negotiator": "^0.6.3",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^13.5.0",
     "react-spinners": "^0.13.8",
+    "server-only": "^0.0.1",
     "swr": "^2.2.4",
     "zustand": "^4.4.6"
   },
