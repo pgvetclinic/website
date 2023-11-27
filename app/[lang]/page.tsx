@@ -11,15 +11,13 @@ import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 import Footer from '@/components/home/footer/Footer';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
+import Testimonial from '@/components/home/testimonials/Testimonial';
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dictionary = await getDictionary(lang);
+export default async function Home() {
+  //   params: { lang },
+  // }: {
+  //   params: { lang: Locale };
+  // const dictionary = await getDictionary(lang);
 
   return (
     <SidebarOpenWrapper>
@@ -27,7 +25,6 @@ export default async function Home({
         <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
           <div className='flex flex-col'>
             <Title />
-            <h2>{dictionary.home.intro.title}</h2>
             <Description />
             <Characteristics />
             <div className='flex justify-around items-center flex-wrap py-5'>
@@ -86,8 +83,9 @@ export default async function Home({
               <ServiceRightArrow />
             </div>
           </div>
-          <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            ola
+          <div className='flex justify-center pt-5 gap-x-10 flex-wrap items-start'>
+            <Testimonial src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid037g5hMw3Bor9YKrp1qdf3SRvs9ojo2xr1Kiq8SXj66YJ2VWJ7ro2BNcTukW96e3e5l%26id%3D100008377443191' />
+            <Testimonial src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgadil.mourad%2Fposts%2Fpfbid02cUn8yZsbSTVCAXKqZKPgKLSdfFTz9rEBYKxRHaGJjZDNzn9ZwCNoFBz7Arr7GnC5l&show_text=true&width=500' />
           </div>
         </section>
       </main>
