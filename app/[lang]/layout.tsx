@@ -4,6 +4,7 @@ import './globals.css';
 import Navigation from '@/components/navigation';
 import Sidebar from '@/components/sidebar';
 import { i18n } from '@/i18n-config';
+import Footer from '@/components/home/footer/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -36,6 +37,9 @@ export default function RootLayout({
         <Navigation />
         <Sidebar />
         {children}
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import { i18n } from '../../../i18n-config';
+import { i18n } from '@/i18n-config';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

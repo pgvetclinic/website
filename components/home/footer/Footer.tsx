@@ -24,9 +24,11 @@ export default function Footer() {
             Call: (20) 01 1446 00522
           </p>
           <div className='flex justify-center items-center pt-2'>
-            <div className='bg-black-2 w-[50px] h-[50px] flex justify-center items-center rounded-[50%]'>
-              <Facebook />
-            </div>
+            <a href='https://www.facebook.com/pgvetclinic'>
+              <div className='bg-black-2 w-[50px] h-[50px] flex justify-center items-center rounded-[50%]'>
+                <Facebook />
+              </div>
+            </a>
           </div>
         </div>
         <div className='flex flex-col justify-between items-start h-full w-[300px]'>

@@ -10,15 +10,9 @@ import Doctors from '@/components/home/doctors/Doctors';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
-import Footer from '@/components/home/footer/Footer';
 import Testimonial from '@/components/home/testimonials/Testimonial';
 
 export default async function Home() {
-  //   params: { lang },
-  // }: {
-  //   params: { lang: Locale };
-  // const dictionary = await getDictionary(lang);
-
   return (
     <SidebarOpenWrapper>
       <main className='flex flex-col w-full h-full justify-center items-center'>
@@ -89,9 +83,6 @@ export default async function Home() {
           </div>
         </section>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </SidebarOpenWrapper>
   );
 }

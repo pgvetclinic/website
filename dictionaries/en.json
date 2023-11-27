@@ -1,7 +1,5 @@
 {
-  "home": {
-    "intro": {
-      "title": "Hello"
-    }
+  "contacts": {
+    "title": "Contact Us"
   }
 }
