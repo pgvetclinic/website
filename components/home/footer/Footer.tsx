@@ -1,8 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import Facebook from '@/components/svg/Facebook';
+import useNavigationStore from '@/store/NavigationStore';
 
 export default function Footer() {
-  return (
+  const isOpen = useNavigationStore((state) => state.isOpen);
+  return !isOpen ? (
     <div className='flex flex-col justify-center items-center w-full py-10 bg-blue-page'>
       <div className='flex sm:pl-24 justify-evenly items-start w-full flex-wrap gap-y-8'>
         <div className='flex flex-col justify-center items-start w-[300px]'>
@@ -79,5 +83,5 @@ export default function Footer() {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 }

@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Close from '@/components/svg/Close';
 import Menu from '@/components/svg/Menu';
+import { getLinkRoute } from '@/lib/Route';
 
 export default function NavBar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
@@ -48,27 +49,27 @@ export default function NavBar() {
             </button>
             <ul className='hidden font-[500] leading-normal flex-row-reverse text-black-7 text-[20px] md:flex gap-x-6'>
               <li>
-                <Link href='/'>
+                <Link href={getLinkRoute(path, '')}>
                   <p>Home</p>
                 </Link>
               </li>
               <li>
-                <Link href='/services'>
+                <Link href={getLinkRoute(path, '/services')}>
                   <p>Our Services</p>
                 </Link>
               </li>
               <li>
-                <Link href='/blog'>
+                <Link href={getLinkRoute(path, '/blog')}>
                   <p>Blog</p>
                 </Link>
               </li>
               <li>
-                <Link href='/about'>
+                <Link href={getLinkRoute(path, '/about')}>
                   <p>About Us</p>
                 </Link>
               </li>
               <li>
-                <Link href='/contacts'>
+                <Link href={getLinkRoute(path, '/contacts')}>
                   <p>Contact Us</p>
                 </Link>
               </li>

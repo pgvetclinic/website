@@ -24,8 +24,8 @@ export default function Close() {
         strokeLinejoin='round'
       />
       <path
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M0.75 10C0.75 16.937 3.063 19.25 10 19.25C16.937 19.25 19.25 16.937 19.25 10C19.25 3.063 16.937 0.75 10 0.75C3.063 0.75 0.75 3.063 0.75 10Z'
         stroke='#2876E8'
         strokeOpacity='0.84'

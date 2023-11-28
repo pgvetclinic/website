@@ -1,7 +1,9 @@
 'use client';
 
+import { getLinkRoute } from '@/lib/Route';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Logo() {
@@ -17,7 +19,7 @@ export default function Logo() {
   }, []);
 
   return (
-    <Link href='/' className='block'>
+    <Link href={getLinkRoute(usePathname(), '')} className='block'>
       <Image
         src={'/images/logo.png'}
         alt='Pg Vet Clinic Logo'

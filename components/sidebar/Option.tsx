@@ -1,3 +1,4 @@
+import { isPathSameRoute } from '@/lib/Route';
 import { usePathname } from 'next/navigation';
 
 type OptionProps = {
@@ -8,7 +9,7 @@ type OptionProps = {
 export default function Option({ pathName, pathText }: OptionProps) {
   const path = usePathname();
 
-  const samePath = path === pathName;
+  const samePath = isPathSameRoute(path, pathName);
   return (
     <div className='flex justify-between items-center'>
       <div
