@@ -15,3 +15,14 @@ export function isPathSameRoute(pathName: string, route: string) {
   if (pathName.length === 1) return route === '/';
   return pathName.substring(3) === route;
 }
+
+export function getLocaleName(locale: string) {
+  switch (locale) {
+    case 'en':
+      return 'English';
+    case 'ar':
+      return 'العربية';
+    default:
+      return 'English';
+  }
+}

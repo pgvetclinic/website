@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import Close from '@/components/svg/Close';
 import Menu from '@/components/svg/Menu';
 import { getLinkRoute } from '@/lib/Route';
+import LocaleSwitcher from './LocaleSwitcher';
 
 export default function NavBar() {
   const isOpen = useNavigationStore((state) => state.isOpen);
@@ -74,6 +75,7 @@ export default function NavBar() {
                 </Link>
               </li>
             </ul>
+            <LocaleSwitcher />
           </div>
         </div>
       </div>

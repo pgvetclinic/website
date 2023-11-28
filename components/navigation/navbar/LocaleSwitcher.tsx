@@ -1,26 +1,35 @@
 'use client';
 
 import { i18n } from '@/i18n-config';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { getRedirectedPathName } from '@/lib/Route';
+import { usePathname, useRouter } from 'next/navigation';
+import { getLocaleName, getRedirectedPathName } from '@/lib/Route';
 
 export default function LocaleSwitcher() {
   const pathName = usePathname();
+
+  const router = useRouter();
+  const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault();
+    const locale = e.target.value;
+    router.push(getRedirectedPathName(pathName, locale));
+  };
+
+  const activeLocale =
+    pathName.length > 2 ? pathName.split('/')[1] : i18n.defaultLocale;
+
   return (
-    <div>
-      <p>Locale Switcher:</p>
-      <ul>
-        {i18n.locales.map((locale) => {
-          return (
-            <li key={locale}>
-              <Link href={getRedirectedPathName(pathName, locale)}>
-                {locale}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <select
+      className='font-[500] leading-normal bg-blue-footer text-black-7 text-[12px] sm:text-[16px] text-right'
+      onChange={(e) => onSelectChange(e)}
+      value={activeLocale}
+    >
+      {i18n.locales.map((locale) => {
+        return (
+          <option key={locale} value={locale}>
+            {getLocaleName(locale)}
+          </option>
+        );
+      })}
+    </select>
   );
 }
