@@ -3,6 +3,7 @@ import ContactMail from '@/components/svg/ContactMail';
 import Phone from '@/components/svg/Phone';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
+import { reverseRowLayout } from '@/lib/Internatinalization';
 import Image from 'next/image';
 
 export default async function Contacts({
@@ -11,7 +12,7 @@ export default async function Contacts({
   params: { lang: Locale };
 }) {
   const dictionary = await getDictionary(lang);
-  const reverse = lang === 'ar' ? 'flex-row-reverse' : '';
+  const reverse = reverseRowLayout(lang);
 
   return (
     <SidebarOpenWrapper>
@@ -37,15 +38,15 @@ export default async function Contacts({
             <div
               className={`flex justify-center items-center gap-2 ${reverse}`}
             >
-              <Phone />
+              <Phone rotate={reverse.length !== 0} />
               <p className='text-black-primary text-center text-[17px] font-[500] leading-[173%]'>
-                0226429022
+                01126264342
               </p>
             </div>
             <div
               className={`flex justify-center items-center gap-2 ${reverse}`}
             >
-              <Phone />
+              <Phone rotate={reverse.length !== 0} />
               <p className='text-black-primary text-center text-[17px] font-[500] leading-[173%]'>
                 0226429022
               </p>

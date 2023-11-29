@@ -11,21 +11,34 @@ import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
 import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 import Testimonial from '@/components/home/testimonials/Testimonial';
+import { Locale } from '@/i18n-config';
+import { reverseRowLayout } from '@/lib/Internatinalization';
+// import { getDictionary } from '@/get-dictionary';
 
-export default async function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  // const dictionary = await getDictionary(lang);
+  const reverseRow = reverseRowLayout(lang);
   return (
     <SidebarOpenWrapper>
       <main className='flex flex-col w-full h-full justify-center items-center'>
-        <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
+        <section
+          className={`flex flex-wrap-reverse ${reverseRow} w-full justify-center items-center px-[10px]`}
+        >
           <div className='flex flex-col'>
-            <Title />
-            <Description />
-            <Characteristics />
-            <div className='flex justify-around items-center flex-wrap py-5'>
-              <AppointmentButton />
+            <Title lang={lang} />
+            <Description lang={lang} />
+            <Characteristics lang={lang} />
+            <div
+              className={`flex justify-around ${reverseRow} items-center flex-wrap py-5`}
+            >
+              <AppointmentButton lang={lang} />
               <div className='flex flex-col justify-center w-[170px] items-center'>
-                <OpenHours days='Sat-Thu' hours='11AM-9PM' />
-                <OpenHours days='Fri' hours='2PM-8PM' />
+                <OpenHours lang={lang} weekday />
+                <OpenHours lang={lang} />
               </div>
             </div>
           </div>

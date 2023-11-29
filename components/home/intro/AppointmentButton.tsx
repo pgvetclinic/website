@@ -1,12 +1,25 @@
+import { getDictionary } from '@/get-dictionary';
 import Arrow from '../../svg/Arrow';
+import { Locale } from '@/i18n-config';
+import { reverseLayout, reverseRowLayout } from '@/lib/Internatinalization';
 
-export default function AppointmentButton() {
+type AppointmentButtonProps = {
+  lang: Locale;
+};
+
+export default async function AppointmentButton({
+  lang,
+}: AppointmentButtonProps) {
+  const dictionary = await getDictionary(lang);
+  const reverse = reverseRowLayout(lang);
   return (
-    <button className='inline-flex py-[16px] px-[32px] justify-center items-center rounded-[55px] bg-blue-primary'>
+    <button
+      className={`inline-flex ${reverse} min-w-[300px] py-[16px] px-[32px] justify-center items-center rounded-[55px] bg-blue-primary`}
+    >
       <span className='text-white-0 text-[20px] px-[22px] font-[500] leading-[173%]'>
-        Make Appointment
+        {dictionary.home.appointment.button}
       </span>
-      <Arrow />
+      <Arrow rotate={reverseLayout(lang)} />
     </button>
   );
 }

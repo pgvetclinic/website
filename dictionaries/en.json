@@ -1,4 +1,45 @@
 {
+  "home": {
+    "title": {
+      "text1": "Give Your Pet",
+      "text2": "More For Less"
+    },
+    "description": {
+      "text1": "Our professional team will take care of you, we",
+      "text2": "value your time and health."
+    },
+    "characteristics": {
+      "appointment": {
+        "title": "Make an Appointment",
+        "description": "Select the best time for you."
+      },
+      "monitoring": {
+        "title": "Continuous monitoring",
+        "description": "We care for your pet all the time."
+      },
+      "visit": {
+        "title": "Visit our Clinic",
+        "description": "Take care of your issues."
+      },
+      "questions": {
+        "title": "Ask Questions",
+        "description": "Ask questions any time."
+      }
+    },
+    "appointment": {
+      "button": "Make Appointment"
+    },
+    "openingHours": {
+      "weekdays": {
+        "days": "Sat-Thu",
+        "hours": "11AM-9PM"
+      },
+      "weekends": {
+        "days": "Fri",
+        "hours": "2PM-8PM"
+      }
+    }
+  },
   "contacts": {
     "title": "Contact Us"
   }

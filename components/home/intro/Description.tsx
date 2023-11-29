@@ -1,8 +1,20 @@
-export default function Description() {
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
+import { reverseItemsAlign } from '@/lib/Internatinalization';
+
+type DescriptionProps = {
+  lang: Locale;
+};
+
+export default async function Description({ lang }: DescriptionProps) {
+  const dictionary = await getDictionary(lang);
+  const itemsPosition = reverseItemsAlign(lang);
   return (
-    <p className='flex flex-col justify-center items-start text-[20px] font-[400] leading-[173%] text-black-8 py-10'>
-      <span>Our professional team will take care of you, we</span>
-      <span> value your time and health.</span>
+    <p
+      className={`flex flex-col justify-center ${itemsPosition} text-[20px] font-[400] leading-[173%] text-black-8 py-10`}
+    >
+      <span>{dictionary.home.description.text1}</span>
+      <span>{dictionary.home.description.text2}</span>
     </p>
   );
 }

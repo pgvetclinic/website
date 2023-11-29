@@ -1,4 +1,45 @@
 {
+  "home": {
+    "title": {
+      "text1": "أعط حيوانك الأليف",
+      "text2": "اكثر قليلا"
+    },
+    "description": {
+      "text1": "فريقنا المحترف سوف يعتني بك، نحن",
+      "text2": "قيمة وقتك والصحة."
+    },
+    "characteristics": {
+      "appointment": {
+        "title": "إحجز موعد",
+        "description": "اختر أفضل وقت بالنسبة لك."
+      },
+      "monitoring": {
+        "title": "المراقبة المستمرة",
+        "description": "نحن نهتم بحيوانك الأليف طوال الوقت."
+      },
+      "visit": {
+        "title": "إحجز موعد",
+        "description": "اعتني بقضاياك."
+      },
+      "questions": {
+        "title": "اسال اسئلة",
+        "description": "اطرح الأسئلة في أي وقت."
+      }
+    },
+    "appointment": {
+      "button": "حدد موعدا"
+    },
+    "openingHours": {
+      "weekdays": {
+        "days": "Sat-Thu",
+        "hours": "11AM-9PM"
+      },
+      "weekends": {
+        "days": "Fri",
+        "hours": "2PM-8PM"
+      }
+    }
+  },
   "contacts": {
     "title": "اتصل بنا"
   }
