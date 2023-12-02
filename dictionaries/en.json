@@ -40,6 +40,43 @@
       }
     }
   },
+  "services": {
+    "title": "Our Services"
+  },
+  "whyus": {
+    "title": "Why Us",
+    "reason1": {
+      "title": "Affordable Prices",
+      "description1": "We are proud to offer the best prices",
+      "description2": "without compromising on quality."
+    },
+    "reason2": {
+      "title": "Continuos Monitoring",
+      "description1": "We will text you when your pet needs",
+      "description2": "any type of treatment or vaccination."
+    },
+    "reason3": {
+      "title": "Medical Support",
+      "description1": "We have a huge amount of high",
+      "description2": "quality medicine."
+    }
+  },
+  "doctors": {
+    "title": "Our Qualified Doctors",
+    "doctor1": {
+      "name": "Dr. Sara Elsaied",
+      "role": "Leading Diagnostic Doctor",
+      "experience": "23 years of experience"
+    },
+    "doctor2": {
+      "name": "Dr. Salma Emed",
+      "role": "Diagnostic Doctor",
+      "experience": "2 years of experience"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
   "contacts": {
     "title": "Contact Us"
   }

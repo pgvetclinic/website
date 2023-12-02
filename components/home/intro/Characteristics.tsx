@@ -4,7 +4,6 @@ import Mail from '../../svg/Mail';
 import Location from '../../svg/Location';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
-import { reverseItemsAlign, reverseRowLayout } from '@/lib/Internatinalization';
 
 type CharacteristicsProps = {
   lang: Locale;
@@ -12,16 +11,14 @@ type CharacteristicsProps = {
 
 export default async function Characteristics({ lang }: CharacteristicsProps) {
   const dictionary = await getDictionary(lang);
-  const reverseRow = reverseRowLayout(lang);
-  const itemsEnd = reverseItemsAlign(lang);
   return (
     <div className='flex flex-col bg-white-1 rounded-[30px] justify-center items-center py-10'>
       <div className='flex flex-wrap'>
-        <div className={`flex ${reverseRow} py-10 px-10 w-[315px]`}>
+        <div className='flex py-10 px-10 w-[315px]'>
           <div className='flex w-[40px] h-[40px] justify-center items-center py-[2.5px] px-[5.75px]'>
             <Calendar />
           </div>
-          <div className={`flex flex-col ${itemsEnd}`}>
+          <div className='flex flex-col'>
             <h6 className='text-black-9 text-[16px] font-[600] leading-normal'>
               {dictionary.home.characteristics.appointment.title}
             </h6>
@@ -30,11 +27,11 @@ export default async function Characteristics({ lang }: CharacteristicsProps) {
             </span>
           </div>
         </div>
-        <div className={`flex ${reverseRow} py-10 px-10 w-[315px]`}>
+        <div className='flex py-10 px-10 w-[315px]'>
           <div className='flex w-[40px] h-[40px] justify-center items-center py-[2.5px] px-[5.75px]'>
             <Doctor />
           </div>
-          <div className={`flex flex-col ${itemsEnd}`}>
+          <div className='flex flex-col'>
             <h6 className='text-black-9 text-[16px] font-[600] leading-normal'>
               {dictionary.home.characteristics.monitoring.title}
             </h6>
@@ -45,11 +42,11 @@ export default async function Characteristics({ lang }: CharacteristicsProps) {
         </div>
       </div>
       <div className='flex flex-wrap'>
-        <div className={`flex ${reverseRow} py-10 px-10 w-[315px]`}>
+        <div className='flex py-10 px-10 w-[315px]'>
           <div className='flex w-[40px] h-[40px] justify-center items-center py-[2.5px] px-[5.75px]'>
             <Location />
           </div>
-          <div className={`flex flex-col ${itemsEnd}`}>
+          <div className='flex flex-col'>
             <h6 className='text-black-9 text-[16px] font-[600] leading-normal'>
               {dictionary.home.characteristics.visit.title}
             </h6>
@@ -58,11 +55,11 @@ export default async function Characteristics({ lang }: CharacteristicsProps) {
             </span>
           </div>
         </div>
-        <div className={`flex ${reverseRow} py-10 px-10 w-[315px]`}>
+        <div className='flex py-10 px-10 w-[315px]'>
           <div className='flex w-[40px] h-[40px] justify-center items-center py-[2.5px] px-[5.75px]'>
             <Mail />
           </div>
-          <div className={`flex flex-col ${itemsEnd}`}>
+          <div className='flex flex-col'>
             <h6 className='text-black-9 text-[16px] font-[600] leading-normal'>
               {dictionary.home.characteristics.questions.description}
             </h6>

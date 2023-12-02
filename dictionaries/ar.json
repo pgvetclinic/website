@@ -40,6 +40,43 @@
       }
     }
   },
+  "services": {
+    "title": "خدماتنا"
+  },
+  "whyus": {
+    "title": "لماذا نحن",
+    "reason1": {
+      "title": "أسعار معقولة",
+      "description1": "نحن فخورون بتقديم أفضل الأسعار",
+      "description2": "دون المساومة على الجودة."
+    },
+    "reason2": {
+      "title": "المراقبة المستمرة",
+      "description1": "سنرسل لك رسالة نصية عندما يحتاج حيوانك الأليف",
+      "description2": "أي نوع من العلاج أو التطعيم."
+    },
+    "reason3": {
+      "title": "الدعم الطبي",
+      "description1": "لدينا كمية كبيرة من عالية",
+      "description2": "دواء عالي الجودة."
+    }
+  },
+  "doctors": {
+    "title": "أطباؤنا المؤهلون",
+    "doctor1": {
+      "name": "Dr. Sara Elsaied",
+      "role": "طبيب تشخيصي رائد",
+      "experience": "23 عاما من الخبرة"
+    },
+    "doctor2": {
+      "name": "Dr. Salma Emed",
+      "role": "دكتور تشخيصي",
+      "experience": "2 عاما من الخبرة"
+    }
+  },
+  "testimonials": {
+    "title": "الشهادات - التوصيات"
+  },
   "contacts": {
     "title": "اتصل بنا"
   }

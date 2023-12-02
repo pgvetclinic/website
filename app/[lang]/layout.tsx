@@ -3,8 +3,9 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/navigation';
 import Sidebar from '@/components/sidebar';
-import { i18n } from '@/i18n-config';
+import { Locale, i18n } from '@/i18n-config';
 import Footer from '@/components/home/footer/Footer';
+import { reverseLayout } from '@/lib/Internatinalization';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,13 +30,13 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} dir={reverseLayout(params.lang) ? 'rtl' : 'ltr'}>
       <body className={poppins.className}>
-        <Navigation />
-        <Sidebar />
+        <Navigation lang={params.lang} />
+        <Sidebar lang={params.lang} />
         {children}
         <footer>
           <Footer />

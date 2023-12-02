@@ -3,7 +3,7 @@ import Characteristics from '@/components/home/intro/Characteristics';
 import Description from '@/components/home/intro/Description';
 import IntroImage from '@/components/home/intro/IntroImage';
 import OpenHours from '@/components/home/intro/OpenHours';
-import ServiceSection from '@/components/home/services/Service';
+import Services from '@/components/home/services/Services';
 import Title from '@/components/home/intro/Title';
 import WhyUs from '@/components/home/whyus/WhyUs';
 import Doctors from '@/components/home/doctors/Doctors';
@@ -12,29 +12,23 @@ import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
 import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 import Testimonial from '@/components/home/testimonials/Testimonial';
 import { Locale } from '@/i18n-config';
-import { reverseRowLayout } from '@/lib/Internatinalization';
-// import { getDictionary } from '@/get-dictionary';
+import { getDictionary } from '@/get-dictionary';
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  // const dictionary = await getDictionary(lang);
-  const reverseRow = reverseRowLayout(lang);
+  const dictionary = await getDictionary(lang);
   return (
     <SidebarOpenWrapper>
       <main className='flex flex-col w-full h-full justify-center items-center'>
-        <section
-          className={`flex flex-wrap-reverse ${reverseRow} w-full justify-center items-center px-[10px]`}
-        >
+        <section className='flex flex-wrap-reverse w-full justify-center items-center px-[10px]'>
           <div className='flex flex-col'>
             <Title lang={lang} />
             <Description lang={lang} />
             <Characteristics lang={lang} />
-            <div
-              className={`flex justify-around ${reverseRow} items-center flex-wrap py-5`}
-            >
+            <div className='flex justify-around items-center flex-wrap py-5'>
               <AppointmentButton lang={lang} />
               <div className='flex flex-col justify-center w-[170px] items-center'>
                 <OpenHours lang={lang} weekday />
@@ -49,7 +43,7 @@ export default async function Home({
         <section className='flex flex-col m-5 w-full justify-center items-center'>
           <div className='flex w-full justify-around items-center'>
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
-              Our Services
+              {dictionary.services.title}
             </h3>
             <div className='flex gap-x-3'>
               <ServiceLeftArrow />
@@ -57,33 +51,33 @@ export default async function Home({
             </div>
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            <ServiceSection />
+            <Services lang={lang} />
           </div>
         </section>
         <section className='flex flex-col m-5 w-full justify-center items-center'>
           <div className='flex w-full justify-around items-center'>
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
-              Why Us
+              {dictionary.whyus.title}
             </h3>
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            <WhyUs />
+            <WhyUs lang={lang} />
           </div>
         </section>
         <section className='flex flex-col m-5 w-full justify-center items-center bg-brown-secondary py-5'>
           <div className='flex w-full justify-around items-center'>
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
-              Our Qualified Doctors
+              {dictionary.doctors.title}
             </h3>
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
-            <Doctors />
+            <Doctors lang={lang} />
           </div>
         </section>
         <section className='flex flex-col m-5 w-full justify-center items-center'>
           <div className='flex w-full justify-around items-center'>
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
-              Testimonials
+              {dictionary.testimonials.title}
             </h3>
             <div className='flex gap-x-3'>
               <ServiceLeftArrow />

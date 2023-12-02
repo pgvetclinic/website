@@ -13,7 +13,7 @@ export default function Option({ pathName, pathText }: OptionProps) {
   return (
     <div className='flex justify-between items-center'>
       <div
-        className={`h-[4px] mr-4 w-[20px] ${
+        className={`h-[4px] mx-4 w-[20px] ${
           samePath ? 'bg-blue-primary' : 'bg-blue-footer'
         }`}
       ></div>
