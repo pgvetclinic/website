@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import path from 'path';
 
 const getServicesDirectory = (lang: Locale) =>
-  path.join(process.cwd(), 'static_info', lang, 'services');
+  path.join(process.cwd(), 'markdown', lang, 'services');
 
 type ServiceId = {
   params: {
