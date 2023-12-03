@@ -31,12 +31,12 @@
     },
     "openingHours": {
       "weekdays": {
-        "days": "Sat-Thu",
-        "hours": "11AM-9PM"
+        "days": "السبت - الخميس",
+        "hours": "١١ صباحا - ٨ مساء"
       },
       "weekends": {
-        "days": "Fri",
-        "hours": "2PM-8PM"
+        "days": "الجمعة",
+        "hours": "٣ مساء - ٨ مساء"
       }
     }
   },
@@ -66,12 +66,12 @@
     "doctor1": {
       "name": "Dr. Sara Elsaied",
       "role": "طبيب تشخيصي رائد",
-      "experience": "23 عاما من الخبرة"
+      "experience": "عاما من الخبرة ٢٣"
     },
     "doctor2": {
       "name": "Dr. Salma Emed",
       "role": "دكتور تشخيصي",
-      "experience": "2 عاما من الخبرة"
+      "experience": "عاما من الخبرة ٢"
     }
   },
   "testimonials": {
@@ -79,5 +79,18 @@
   },
   "contacts": {
     "title": "اتصل بنا"
+  },
+  "footer": {
+    "address": "488Q+V92، ش شيخ أحمد إبراهيم ،ألف مسكن،قسم مصر الجديدة, Al Matar, El Nozha, Cairo Governorate 4470220",
+    "phone": "اتصل: (٢٠) ٠١ ١١٦٩ ٩٢٣٣٣ ",
+    "explore": "يستكشف",
+    "feature": "ميزة",
+    "about": "معلومات عنا",
+    "faq": "الأسئلة الشائعة",
+    "contact": "اتصل بنا",
+    "legal": "قانوني",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة",
+    "rights": "© بي جي فيت كلينيك، جميع الحقوق محفوظة ٢٠٢٣"
   }
 }

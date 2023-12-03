@@ -42,7 +42,7 @@ export default function Navigation({ lang }: NavigationProps) {
           top: hideNavBar ? '-200px' : '0',
           transition: 'top 0.5s',
         }}
-        className='w-full bg-blue-footer h-20 sticky z-50'
+        className='w-full bg-blue-page h-20 sticky z-50'
       >
         <div className='container mx-auto px-4 h-full'>
           <div className='flex justify-around h-full items-center'>

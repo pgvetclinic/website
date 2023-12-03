@@ -25,14 +25,14 @@ const config: Config = {
         9: 'rgba(6, 33, 38, 0.8)',
       },
       white: {
-        0: '#ffffff',
+        0: 'rgba(255, 255, 255, 1)',
         1: 'rgba(244, 245, 244, 1)',
       },
       blue: {
         primary: 'rgba(40, 118, 232, 0.84)',
         secondary: 'rgba(36, 190, 224, 0.10)',
-        footer: '#F7FCFD',
-        page: 'rgba(36, 190, 224, 0.1)',
+        page: 'rgba(247, 252, 253, 1)',
+        footer: 'rgba(36, 190, 224, 0.1)',
       },
       brown: {
         primary: 'rgba(207, 125, 78, 1)',

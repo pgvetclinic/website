@@ -8,8 +8,6 @@ import Title from '@/components/home/intro/Title';
 import WhyUs from '@/components/home/whyus/WhyUs';
 import Doctors from '@/components/home/doctors/Doctors';
 import SidebarOpenWrapper from '@/components/sidebar/SidebarOpenWrapper';
-import ServiceLeftArrow from '@/components/svg/ServiceLeftArrow';
-import ServiceRightArrow from '@/components/svg/ServiceRightArrow';
 import Testimonial from '@/components/home/testimonials/Testimonial';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
@@ -45,10 +43,10 @@ export default async function Home({
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
               {dictionary.services.title}
             </h3>
-            <div className='flex gap-x-3'>
+            {/* <div className='flex gap-x-3'>
               <ServiceLeftArrow />
               <ServiceRightArrow />
-            </div>
+            </div> */}
           </div>
           <div className='flex justify-center pt-5 gap-4 flex-wrap items-start'>
             <Services lang={lang} />
@@ -79,10 +77,10 @@ export default async function Home({
             <h3 className='text-black-primary text-[28px] font-[700] leading-[112%]'>
               {dictionary.testimonials.title}
             </h3>
-            <div className='flex gap-x-3'>
+            {/* <div className='flex gap-x-3'>
               <ServiceLeftArrow />
               <ServiceRightArrow />
-            </div>
+            </div> */}
           </div>
           <div className='flex justify-center pt-5 gap-x-10 flex-wrap items-start'>
             <Testimonial src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid037g5hMw3Bor9YKrp1qdf3SRvs9ojo2xr1Kiq8SXj66YJ2VWJ7ro2BNcTukW96e3e5l%26id%3D100008377443191' />

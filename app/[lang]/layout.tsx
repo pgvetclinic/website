@@ -38,9 +38,7 @@ export default function RootLayout({
         <Navigation lang={params.lang} />
         <Sidebar lang={params.lang} />
         {children}
-        <footer>
-          <Footer />
-        </footer>
+        <Footer lang={params.lang} />
       </body>
     </html>
   );

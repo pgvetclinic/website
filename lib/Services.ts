@@ -1,8 +1,10 @@
+import { Locale } from '@/i18n-config';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-const SERVICES_DIRECTORY = path.join(process.cwd(), 'static_info/services');
+const getServicesDirectory = (lang: Locale) =>
+  path.join(process.cwd(), 'static-info', lang, 'services');
 
 type ServiceId = {
   params: {
@@ -10,8 +12,8 @@ type ServiceId = {
   };
 };
 
-export function getAllServiceIds(): ServiceId[] {
-  const fileNames = fs.readdirSync(SERVICES_DIRECTORY);
+export function getAllServiceIds(lang: Locale): ServiceId[] {
+  const fileNames = fs.readdirSync(getServicesDirectory(lang));
 
   return fileNames.map((fileNames) => {
     return {
@@ -22,13 +24,14 @@ export function getAllServiceIds(): ServiceId[] {
   });
 }
 
-export function getSortedServiceData() {
-  const fileNames = fs.readdirSync(SERVICES_DIRECTORY);
+export function getSortedServiceData(lang: Locale) {
+  const servicesDir = getServicesDirectory(lang);
+  const fileNames = fs.readdirSync(servicesDir);
 
   const allServicesData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(SERVICES_DIRECTORY, fileName);
+    const fullPath = path.join(servicesDir, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const { data } = matter(fileContents);

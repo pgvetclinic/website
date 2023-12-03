@@ -19,7 +19,7 @@ export default function LocaleSwitcher() {
 
   return (
     <select
-      className='font-[500] leading-normal bg-blue-footer text-black-7 text-[12px] sm:text-[16px] text-right'
+      className='font-[500] leading-normal bg-blue-page text-black-7 text-[12px] sm:text-[16px] text-right'
       onChange={(e) => onSelectChange(e)}
       value={activeLocale}
     >

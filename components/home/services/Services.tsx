@@ -20,7 +20,10 @@ type ServicesProps = {
 };
 
 export default function Services({ lang }: ServicesProps) {
-  const { data, isLoading, error } = useSWR('/api/service', fetcher);
+  const { data, isLoading, error } = useSWR(
+    `/api/service?lang=${lang}`,
+    fetcher
+  );
 
   if (isLoading) return <FadeLoader color='rgba(40, 118, 232, 0.84)' />;
   if (error)
