@@ -33,7 +33,6 @@ export function getAllServiceIds(lang: Locale): ServiceId[] {
 
 export function getSortedServiceData(lang: Locale) {
   const servicesDir = getServicesDirectory(lang);
-  console.log('Using dir:', servicesDir);
   const fileNames = fs.readdirSync(servicesDir);
 
   const allServicesData = fileNames.map((fileName) => {

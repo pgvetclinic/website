@@ -12,11 +12,13 @@ import Testimonial from '@/components/home/testimonials/Testimonial';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+type HomeProps = {
+  params: {
+    lang: Locale;
+  };
+};
+
+export default async function Home({ params: { lang } }: HomeProps) {
   const dictionary = await getDictionary(lang);
   return (
     <SidebarOpenWrapper>
