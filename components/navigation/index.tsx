@@ -39,7 +39,7 @@ export default function Navigation({ lang }: NavigationProps) {
     <>
       <div
         style={{
-          top: hideNavBar ? '-200px' : '0',
+          top: hideNavBar && !isOpen ? '-200px' : '0',
           transition: 'top 0.5s',
         }}
         className='w-full bg-blue-page h-20 sticky z-50'

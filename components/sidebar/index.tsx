@@ -6,7 +6,6 @@ import Option from './Option';
 import { getLinkRoute } from '@/lib/Route';
 import { usePathname } from 'next/navigation';
 import { reverseLayout } from '@/lib/Internatinalization';
-import { useEffect } from 'react';
 
 type SidebarProps = {
   lang: string;
@@ -15,14 +14,9 @@ type SidebarProps = {
 export default function Sidebar({ lang }: SidebarProps) {
   const isOpen = useNavigationStore((state) => state.isOpen);
 
-  useEffect(
-    () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }),
-    []
-  );
-
   const path = usePathname();
   return isOpen ? (
-    <div className='absolute w-full h-full overflow-hidden justify-center bg-blue-page grid left-0 z-50'>
+    <div className='absolute w-full h-[90%] overflow-hidden justify-center bg-blue-page grid left-0 z-50'>
       <ul className='sidebar-nav'>
         <li>
           <Link href={getLinkRoute(path, '')}>
