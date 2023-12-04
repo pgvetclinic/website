@@ -16,7 +16,7 @@ export default function Sidebar({ lang }: SidebarProps) {
 
   const path = usePathname();
   return isOpen ? (
-    <div className='absolute w-full h-[90%] overflow-hidden justify-center bg-blue-page grid left-0 z-50'>
+    <div className='fixed w-full h-full overflow-hidden justify-center bg-blue-page grid left-0 z-10'>
       <ul className='sidebar-nav'>
         <li>
           <Link href={getLinkRoute(path, '')}>
