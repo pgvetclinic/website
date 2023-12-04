@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import path from 'path';
 
 const getServicesDirectory = (lang: Locale) =>
-  path.resolve('./public', 'markdown', lang, 'services');
+  path.join(process.cwd(), `static_info/${lang}/services`);
 
 type ServiceId = {
   params: {
@@ -26,6 +26,7 @@ export function getAllServiceIds(lang: Locale): ServiceId[] {
 
 export function getSortedServiceData(lang: Locale) {
   const servicesDir = getServicesDirectory(lang);
+  console.log('Using dir:', servicesDir);
   const fileNames = fs.readdirSync(servicesDir);
 
   const allServicesData = fileNames.map((fileName) => {
