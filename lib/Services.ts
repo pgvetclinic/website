@@ -3,8 +3,15 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-const getServicesDirectory = (lang: Locale) =>
-  path.join(process.cwd(), `static_info/${lang}/services`);
+const SERVICES_DIR_EN = path.resolve('./static-info/en/services');
+const SERVICES_DIR_AR = path.resolve('./static-info/ar/services');
+
+function getServicesDirectory(lang: Locale): string {
+  if (lang === 'en') {
+    return SERVICES_DIR_EN;
+  }
+  return SERVICES_DIR_AR;
+}
 
 type ServiceId = {
   params: {
